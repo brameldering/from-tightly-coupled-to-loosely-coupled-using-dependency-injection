@@ -3,7 +3,8 @@
 public class Main {
   public static void main(String[] args) {
 
-    ShoppingCart shoppingCart = new ShoppingCart();
-    shoppingCart.processPayment("CreditCardPayment", 10);
+    PaymentProcessor cc = new CreditCardPayment();
+    ShoppingCart shoppingCart = new ShoppingCart(cc);
+    shoppingCart.processPayment(10);
   }
 }

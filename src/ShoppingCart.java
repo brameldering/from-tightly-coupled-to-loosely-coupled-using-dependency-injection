@@ -1,14 +1,12 @@
 public class ShoppingCart {
 
-  private CreditCardPayment cc = new CreditCardPayment();
-  private DebitCardPayment debit = new DebitCardPayment();
+  private final PaymentProcessor paymentProcessor;
 
-  public void processPayment(String type, double amount) {
-    if (type.equals("CreditCardPayment")) {
-      cc.processPayment(amount);
-    }
-    else if (type.equals("DebitCardPayment")) {
-      debit.processPayment(amount);
-    }
+  public ShoppingCart(PaymentProcessor paymentProcessor) {
+    this.paymentProcessor = paymentProcessor;
+  }
+
+  public void processPayment(double amount) {
+    paymentProcessor.processPayment(amount);
   }
 }
