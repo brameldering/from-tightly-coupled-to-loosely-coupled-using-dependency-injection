@@ -1,3 +1,5 @@
+package shoppingcart;
+
 public class CreditCardPayment implements PaymentProcessor {
 
   public void processPayment(double Amount) {

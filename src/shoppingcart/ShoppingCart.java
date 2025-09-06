@@ -1,3 +1,5 @@
+package shoppingcart;
+
 public class ShoppingCart {
 
   private final PaymentProcessor paymentProcessor;
