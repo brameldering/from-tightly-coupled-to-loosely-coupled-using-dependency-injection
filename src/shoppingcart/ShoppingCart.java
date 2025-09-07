@@ -8,7 +8,7 @@ public class ShoppingCart {
     this.paymentProcessor = paymentProcessor;
   }
 
-  public void processPayment(double amount) {
+  public void checkOut (double amount) {
     paymentProcessor.processPayment(amount);
   }
 }

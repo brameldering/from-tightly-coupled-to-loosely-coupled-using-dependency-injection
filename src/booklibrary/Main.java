@@ -7,9 +7,10 @@ public class Main {
 
     Book book = new Book();
 
-//    BookSaveFormat bookSaveFormat = new BookSaveToText();
-    BookPersistence bookPersistence = new BookPersistenceImpl(new BookSaveToText());
+    BookPersistence bookPersistenceText = new BookPersistenceImpl(new BookSaveToText());
+    bookPersistenceText.saveBook(book);
 
-    bookPersistence.saveBook(book);
+    BookPersistence bookPersistenceToDB = new BookPersistenceImpl(new BookSaveToDB());
+    bookPersistenceToDB.saveBook(book);
   }
 }
